@@ -23,7 +23,7 @@ SET default_table_access_method = heap;
 --
 -- Name: locations; Type: TABLE; Schema: public; Owner: -
 --
-
+CREATE EXTENSION unaccent SCHEMA public;
 CREATE TABLE public.locations (
     id integer NOT NULL,
     parent_id integer,

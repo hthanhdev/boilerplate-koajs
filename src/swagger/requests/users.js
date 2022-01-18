@@ -49,7 +49,8 @@ const schema = {
 		.default([{
 			key: defaults.sortedKey,
 			reverse: defaults.reverse,
-		}, ]),
+		},]),
+	string: Joi.string().allow('')
 };
 
 module.exports = {
@@ -59,7 +60,7 @@ module.exports = {
 			size: schema.size,
 			sortedBy: schema.sortedBy,
 			id: schema.id,
-			email: schema.email,
+			email: schema.string,
 			phone: schema.phone,
 			name: schema.name,
 			createdFrom: schema.createdFrom,

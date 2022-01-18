@@ -39,6 +39,8 @@ JWT_PRIVATE_KEY=src/keys/ecdsa.key
 
 View the website at: http://localhost:3000
 
+### Testing Unit Test
+```$ npm test```
 ### Database
 #### Dump
 ```src/database/20221017_init.sql```
