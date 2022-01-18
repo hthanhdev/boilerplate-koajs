@@ -1,6 +1,8 @@
 const fs = require("fs");
 const jwt = require("jsonwebtoken");
-const { cfg } = require("../config");
+const {
+	cfg
+} = require("../config");
 const db = require("../models");
 
 const verifyFromUser = async (user) => {
@@ -18,7 +20,6 @@ const verifyFromUser = async (user) => {
 
 const verify = async (ctx) => {
 	const token = ctx.request.token;
-
 	if (!token) return ctx.throw(401, "Token Required");
 
 	const cert = await fs.readFileSync(cfg("JWT_PUBLIC_KEY"));
@@ -49,4 +50,8 @@ const sign = async (data) => {
 	});
 };
 
-module.exports = { verify, sign, verifyFromUser };
+module.exports = {
+	verify,
+	sign,
+	verifyFromUser
+};
