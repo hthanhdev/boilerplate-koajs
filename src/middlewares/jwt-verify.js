@@ -1,4 +1,6 @@
-const { jwt } = require("require.all")("../helpers");
+const {
+	jwt
+} = require("require.all")("../helpers");
 
 const verifyToken = async (ctx, next) => {
 	let user = {};
@@ -7,9 +9,14 @@ const verifyToken = async (ctx, next) => {
 	} catch (error) {
 		ctx.throw(error);
 	}
+	if (!user.loginInfo) {
+		return ctx.throw(401, "Invalid Token");
+	}
 	if (user.loginInfo.web !== ctx.request.token)
 		return ctx.throw(401, "Invalid Token");
-	ctx.state = { user };
+	ctx.state = {
+		user
+	};
 	await next();
 };
 

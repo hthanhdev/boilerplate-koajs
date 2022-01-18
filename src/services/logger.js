@@ -1,8 +1,22 @@
-import { createLogger, format, transports, addColors } from "winston";
-import { cfg } from "../config";
+const {
+	createLogger,
+	format,
+	transports,
+	addColors
+} = require("winston");
+import {
+	cfg
+} from "../config";
 import moment from "moment";
 
-const { combine, colorize, timestamp, splat, printf, align } = format;
+const {
+	combine,
+	colorize,
+	timestamp,
+	splat,
+	printf,
+	align
+} = format;
 
 const logLevels = {
 	levels: {
@@ -27,7 +41,12 @@ addColors(logLevels.colors);
 const LOG_LEVEL = cfg("APP_LOG_LEVEL");
 
 const myFormat = printf((info) => {
-	let { timestamp, level, label, message } = info;
+	let {
+		timestamp,
+		level,
+		label,
+		message
+	} = info;
 	label = label || "";
 	timestamp = moment().format("YYYY-MM-DD HH:mm:ss");
 	return `${timestamp} [${level}] ${label.toUpperCase()}: ${message}`;

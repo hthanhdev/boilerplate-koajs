@@ -5,4 +5,6 @@ const cfg = (keyName, parseFunc = String) => {
   return parseFunc(process.env[keyName]);
 };
 
-export { cfg };
+module.exports = {
+  cfg
+};

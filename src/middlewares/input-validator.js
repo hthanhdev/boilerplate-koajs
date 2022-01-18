@@ -1,4 +1,6 @@
-const { validation } = require("swagger-generator-koa");
+const {
+	validation
+} = require("swagger-generator-koa");
 const statusCode = 400;
 const errorName = "Bad Request";
 // because of next func is in validation function, so if next function
