@@ -32,6 +32,7 @@ const transformQuery = (data, excludes = []) => {
 const transformDataWithSchemaKeys = (data, schema) => {
   const result = {};
   for (const key in schema) {
+    console.log("🚀 ~ file: query-transformer.js ~ line 35 ~ transformDataWithSchemaKeys ~ key", key)
     if ((_.has(data), key)) result[key] = data[key];
   }
   return result;
