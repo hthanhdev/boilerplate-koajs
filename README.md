@@ -43,7 +43,7 @@ View the website at: http://localhost:3000
 #### Dump
 ```src/database/20221017_init.sql```
 #### Design
-![Design]](https://user-images.githubusercontent.com/23132269/104262307-ed309880-54b9-11eb-9721-a75c10bbc49b.png)
+![boilerplate-koajs](https://user-images.githubusercontent.com/63234227/149852462-c5b4d978-c091-4f94-abab-2cf774835b3e.png)
 
 ### Postman 
 Link : https://www.getpostman.com/collections/110fad10ebaba23549fd
